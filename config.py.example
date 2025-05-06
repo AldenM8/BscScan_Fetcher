@@ -1,0 +1,16 @@
+import os
+
+# BscScan API 設定
+BSCSCAN_API_KEY = 'YOUR_BSCSCAN_API_KEY'  # 替換為您的 BscScan API 金鑰
+BSCSCAN_API_URL = 'https://api.bscscan.com/api'
+
+# 資料庫設定
+DB_HOST = 'localhost'
+DB_PORT = 3306
+DB_NAME = 'your_database_name'
+DB_USER = 'your_database_user'
+DB_PASSWORD = 'your_database_password'
+DB_TABLE = 'your_transactions_table'
+
+# 資料庫連接字串
+DATABASE_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}" 

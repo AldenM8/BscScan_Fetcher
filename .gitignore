@@ -1,0 +1,87 @@
+# 配置文件
+config.env
+.env
+*.ini
+
+# Python 編譯檔案
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 日誌文件
+*.log
+logs/
+log/
+
+# 虛擬環境
+venv/
+env/
+ENV/
+.venv/
+virtualenv/
+.virtualenv/
+
+# IDE 和編輯器
+.idea/
+.vscode/
+*.swp
+*.swo
+.spyderproject
+.spyproject
+.ropeproject
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# 操作系統生成的文件
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+Icon?
+
+# 臨時文件
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+*.cache
+tmp/
+temp/
+
+# 資料庫
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# 輸出和報告
+output/
+reports/
+
+# 專案特定
+.coverage
+htmlcov/
+.pytest_cache/ 
+/config.py
