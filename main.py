@@ -171,9 +171,21 @@ def main():
     logger.info("=" * 50)
     
     try:
-        process_pending_transactions()
-    except Exception as e:
-        logger.error(f"程序執行期間發生錯誤: {e}")
+        # 每5分鐘執行一次
+        while True:
+            try:
+                logger.info("開始執行交易狀態檢查...")
+                process_pending_transactions()
+                logger.info(f"本次執行完畢，等待5分鐘後再次執行...")
+                # 等待5分鐘
+                time.sleep(300)
+            except Exception as e:
+                logger.error(f"程序執行期間發生錯誤: {e}")
+                logger.info("5分鐘後重試...")
+                time.sleep(300)
+    except KeyboardInterrupt:
+        # 處理鍵盤中斷 (Ctrl+C)
+        logger.info("接收到鍵盤中斷信號，程序結束")
     
     logger.info("程序執行完畢")
     logger.info("=" * 50)
