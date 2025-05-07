@@ -1,0 +1,25 @@
+# Git
+.git
+.gitignore
+
+# 環境和快取文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# 個人配置文件
+config.py
+
+# 日誌文件
+logs/
+
+# 其他不需要的文件
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo 

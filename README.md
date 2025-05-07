@@ -11,11 +11,45 @@
 
 ## 安裝
 
+### 直接安裝
+
 1. 克隆此專案存儲庫
 2. 安裝依賴項：
 
 ```bash
 pip install -r requirements.txt
+```
+
+### 使用 Docker
+
+本專案提供了 Docker 支援，可以使用以下方式運行：
+
+1. 確保已安裝 [Docker](https://www.docker.com/get-started) 和 [Docker Compose](https://docs.docker.com/compose/install/)
+2. 複製 `config.py.example` 為 `config.py` 並配置
+3. 使用 Docker Compose 啟動服務：
+
+```bash
+# 建立並啟動容器
+docker-compose up -d
+
+# 查看日誌
+docker-compose logs -f
+
+# 停止服務
+docker-compose down
+```
+
+或者使用 Docker 命令：
+
+```bash
+# 建立映像檔
+docker build -t bscscan-fetcher .
+
+# 運行容器
+docker run -d --name bscscan-fetcher \
+  -v $(pwd)/logs:/app/logs \
+  -v $(pwd)/config.py:/app/config.py \
+  bscscan-fetcher
 ```
 
 ## 配置
@@ -24,6 +58,8 @@ pip install -r requirements.txt
 2. 編輯 `config.py` 文件，設置您的 BscScan API 金鑰和資料庫連接信息
 
 ## 使用方法
+
+### 直接運行
 
 執行主程序以更新交易狀態：
 

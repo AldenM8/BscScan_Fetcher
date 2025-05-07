@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  bscscan-fetcher:
+    build: .
+    container_name: bscscan-fetcher
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+      - ./config.py:/app/config.py
+    environment:
+      - TZ=Asia/Taipei 

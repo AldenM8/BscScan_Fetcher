@@ -20,10 +20,11 @@ if not os.path.exists(log_dir):
 log_file = os.path.join(log_dir, get_log_filename())
 
 logging.basicConfig(
+    encoding='utf-8',
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_file),
+        logging.FileHandler(log_file, encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
